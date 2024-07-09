@@ -29,8 +29,11 @@
 
     <!-- One -->
     <section id="worked-in" class="wrapper style2 spotlights">
+        <div class="container text-center">
+            <h1>&lt; Projects where i've participated /&gt;</h1>
+        </div>
         <section>
-            <a href="#" class="image"><img src="@/assets/pic01.jpg" alt="profile-img" data-position="center center" /></a>
+            <CarouselWidget :gallery="['websites/apdevs.png', 'websites/dulce.png', 'websites/brow.png', 'websites/cgp.png']" :widht="'500px'" :height="'400px'"></CarouselWidget>
             <div class="content">
                 <div class="inner">
                     <h2>Sed ipsum dolor</h2>
@@ -42,7 +45,6 @@
             </div>
         </section>
         <section>
-            <a href="#" class="image"><img src="@/assets/pic02.jpg" alt="" data-position="top center" /></a>
             <div class="content">
                 <div class="inner">
                     <h2>Feugiat consequat</h2>
@@ -52,9 +54,10 @@
                     </ul>
                 </div>
             </div>
+            <CarouselWidget :gallery="['systems/pos.png', 'systems/mahlen.png', 'systems/facturacion.png']" :widht="'500px'" :height="'400px'"></CarouselWidget>
         </section>
         <section>
-            <a href="#" class="image"><img src="@/assets/pic03.jpg" alt="" data-position="25% 25%" /></a>
+            <CarouselWidget :gallery="['others/vesta.png', 'others/cloud.png']" :widht="'500px'" :height="'400px'"></CarouselWidget>
             <div class="content">
                 <div class="inner">
                     <h2>Ultricies aliquam</h2>
@@ -171,10 +174,10 @@
 </template>
 
 <script>
+    import CarouselWidget from '@/widgets/CarouselWidget'
     export default {
-        name: 'HelloWorld',
-        props: {
-            msg: String
+        components: {
+            CarouselWidget
         }
     }
 </script>
