@@ -3739,7 +3739,7 @@ input, select, textarea {
 			border: 0;
 			color: rgba(255, 255, 255, 0.35);
 			display: block;
-			font-size: 0.6em;
+			font-size: 1em;
 			font-weight: bold;
 			letter-spacing: 0.25em;
 			line-height: 1.75;
@@ -3911,4 +3911,18 @@ input, select, textarea {
 .profile-img {
 	box-shadow: -1px -1px 6px 0 rgb(0 0 0), 4px 4px 16px 2px rgb(159 126 243);
 	border-radius: 30px;
+	width: 400px;
+	height: auto;
+}
+
+@media only screen and (max-width: 450px) {
+	.profile-img {
+		width: 100%;
+	}
+}
+
+.img-text {
+	display: flex;
+	align-items: center;
+	margin: 0 0 1em 0;
 }

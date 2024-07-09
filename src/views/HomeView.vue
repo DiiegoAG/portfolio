@@ -1,13 +1,34 @@
 <template>
     <!-- Intro -->
-    <section id="intro" class="wrapper style1 fullscreen fade-up">
+    <section id="welcome" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
-            <h1>Hi, I'm Diego Arreola</h1>
+            <img class="profile-img" src="@/assets/perfil.jpeg" alt="profile-img" data-position="top center"/>
+            <h1>Hi!, Welcome to my portfolio</h1>
+            <h2>I'm Diego Arreola, Full Stack developer</h2>
+            <p>
+                I'm from Mexico, <strong>25 years old</strong>, currently live in Celaya, Gto.
+                <br>
+                My favorites languages to program are <strong>PHP</strong> for back-end & <strong>JavaScript</strong> for front-end. I've worked with Java, C++ and a little bit Python.
+                <br>
+                I usually use <strong>Laravel</strong> for back-end & <strong>VueJS</strong> for front-end, at the moment i'm using Laravel for back-end and a mix of old frameworks like <strong>Marionette & BackBone</strong>.
+                <br>
+                I've developed websites with <strong>CMS</strong> like <strong>Wordpress & Shopify</strong>, personally i like to use Wordpress.
+                <br>
+                Also i've designed to many websites using <strong>HTML, CSS & Javascript</strong>.
+            </p>
+            <p class="img-text">
+                <img src="@/assets/itclogo.png" width="100px" alt="itcelaya-logo"/>
+                <span>
+                    <strong>&nbsp; Graduated from the National Technological Institute of Mexico in Celaya.</strong>
+                    <br>
+                    <small>&nbsp; Jun 2023</small>
+                </span>
+            </p>
         </div>
     </section>
 
     <!-- One -->
-    <section id="one" class="wrapper style2 spotlights">
+    <section id="worked-in" class="wrapper style2 spotlights">
         <section>
             <a href="#" class="image"><img src="@/assets/pic01.jpg" alt="profile-img" data-position="center center" /></a>
             <div class="content">
@@ -157,21 +178,3 @@
         }
     }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-    h3 {
-        margin: 40px 0 0;
-    }
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    li {
-        display: inline-block;
-        margin: 0 10px;
-    }
-    a {
-        color: #42b983;
-    }
-</style>
