@@ -3926,3 +3926,11 @@ input, select, textarea {
 	align-items: center;
 	margin: 0 0 1em 0;
 }
+
+.container {
+	padding: 1em 0 0 2em;
+}
+
+.text-center {
+	text-align: center !important;
+}

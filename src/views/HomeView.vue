@@ -47,7 +47,7 @@
         <section>
             <div class="content">
                 <div class="inner">
-                    <h2>Feugiat consequat</h2>
+                    <h2>Sed ipsum dolor</h2>
                     <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
                     <ul class="actions">
                         <li><a href="generic.html" class="button">Learn more</a></li>
@@ -60,7 +60,7 @@
             <CarouselWidget :gallery="['others/vesta.png', 'others/cloud.png']" :widht="'500px'" :height="'400px'"></CarouselWidget>
             <div class="content">
                 <div class="inner">
-                    <h2>Ultricies aliquam</h2>
+                    <h2>Sed ipsum dolor</h2>
                     <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
                     <ul class="actions">
                         <li><a href="generic.html" class="button">Learn more</a></li>
