@@ -21,25 +21,25 @@
                 <span>
                     <strong>&nbsp; Graduated from the National Technological Institute of Mexico in Celaya.</strong>
                     <br>
-                    <small>&nbsp; Jun 2023</small>
+                    <small>&nbsp; Dec 2022</small>
                 </span>
             </p>
         </div>
     </section>
 
     <!-- One -->
-    <section id="worked-in" class="wrapper style2 spotlights">
+    <section id="experience" class="wrapper style2 spotlights">
         <div class="container text-center">
-            <h1>&lt; Projects where i've participated /&gt;</h1>
+            <h1>&lt; Experience /&gt;</h1>
         </div>
         <section>
             <CarouselWidget :gallery="['websites/apdevs.png', 'websites/dulce.png', 'websites/brow.png', 'websites/cgp.png']" :widht="'500px'" :height="'400px'"></CarouselWidget>
             <div class="content">
                 <div class="inner">
-                    <h2>Sed ipsum dolor</h2>
-                    <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+                    <h2>My websites designed</h2>
+                    <p>I´ve developed too much websites using CMS like Wordpress or Shopify but also with only HTML, CSS and JS. I started to design 5 years ago when started the university.</p>
                     <ul class="actions">
-                        <li><a href="generic.html" class="button">Learn more</a></li>
+                        <li><a href="generic.html" @click.prevent="openModal('DesignView')" class="button">Learn more</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,10 +47,10 @@
         <section>
             <div class="content">
                 <div class="inner">
-                    <h2>Sed ipsum dolor</h2>
-                    <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+                    <h2>Systems where I've developed</h2>
+                    <p>I currently have 2 years of experience in the development area where I've participated in different development full stack projects principally using <strong>Laravel (PHP)</strong> for back and <strong>MarrionetteJS, BackboneJS and VueJS (JavaScript)</strong> in frontend.</p>
                     <ul class="actions">
-                        <li><a href="generic.html" class="button">Learn more</a></li>
+                        <li><a href="generic.html" @click.prevent="openModal('ProgrammingView')" class="button">Learn more</a></li>
                     </ul>
                 </div>
             </div>
@@ -60,10 +60,10 @@
             <CarouselWidget :gallery="['others/vesta.png', 'others/cloud.png']" :widht="'500px'" :height="'400px'"></CarouselWidget>
             <div class="content">
                 <div class="inner">
-                    <h2>Sed ipsum dolor</h2>
+                    <h2>Some other activities in the area</h2>
                     <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
                     <ul class="actions">
-                        <li><a href="generic.html" class="button">Learn more</a></li>
+                        <li><a href="generic.html" @click.prevent="openModal('OthersView')" class="button">Learn more</a></li>
                     </ul>
                 </div>
             </div>
@@ -171,13 +171,61 @@
             </div>
         </div>
     </section>
+
+    <vs-modal class="modal" ref="DesignView" title="My websites designed" :removeCloseButton="true" size="l">
+        <div class="modal-body">
+            <DesignView></DesignView>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-modal" @click="closeModal('DesignView')">Close</button>
+        </div>
+    </vs-modal>
+
+    <vs-modal class="modal" ref="ProgrammingView" title="I've programmed" :removeCloseButton="true" size="l">
+        <div class="modal-body">
+            <ProgrammingView></ProgrammingView>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-modal" @click="closeModal('ProgrammingView')">Close</button>
+        </div>
+    </vs-modal>
+
+    <vs-modal class="modal" ref="OthersView" title="Some other activities in the area" :removeCloseButton="true" size="l">
+        <div class="modal-body">
+            <OthersView></OthersView>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-modal" @click="closeModal('OthersView')">Close</button>
+        </div>
+    </vs-modal>
 </template>
 
 <script>
-    import CarouselWidget from '@/widgets/CarouselWidget'
+    import CarouselWidget from '@/widgets/CarouselWidget';
+    import VsModal from "@vuesimple/vs-modal";
+    import DesignView from '@/views/DesignView';
+    import ProgrammingView from '@/views/ProgrammingView';
+    import OthersView from '@/views/OthersView';
+
     export default {
         components: {
-            CarouselWidget
-        }
+            CarouselWidget,
+            VsModal,
+            DesignView,
+            ProgrammingView,
+            OthersView
+        },
+        methods: {
+            openModal(ref) {
+                this.$refs[ref].open();
+            },
+            closeModal(ref) {
+                this.$refs[ref].close();
+            },
+        },
     }
 </script>
+
+<style>
+
+</style>
