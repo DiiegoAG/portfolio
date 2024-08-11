@@ -206,6 +206,16 @@
                 position: 'bottom-right',
             });
         },
+        data () {
+            return {
+                mailData: {
+                    email: '',
+                    name: '',
+                    subject: '',
+                    message: '',
+                }
+            }
+        },
         components: {
             CarouselWidget,
             VsModal,
