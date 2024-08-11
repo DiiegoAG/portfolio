@@ -252,6 +252,7 @@
                             message: 'Your message has been successfully sent!',
                             position: 'bottom-right',
                         });
+                        this.clearForm();
                     }, 2000);
                 })
                 .catch(error => {
@@ -263,6 +264,12 @@
                     }, 2000);
                 });
             },
+            clearForm () {
+                this.mailData.email = '';
+                this.mailData.name = '';
+                this.mailData.subject = '';
+                this.mailData.message = '';
+            }
         },
     }
 </script>
