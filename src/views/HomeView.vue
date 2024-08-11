@@ -164,6 +164,7 @@
         <div class="modal-footer">
             <button class="btn-modal" @click="closeModal('DesignView')">Close</button>
         </div>
+        <hr style="visibility: hidden; height: 20px;">
     </vs-modal>
 
     <vs-modal class="modal" ref="ProgrammingView" title="I've programmed" :removeCloseButton="true" size="l">
@@ -173,6 +174,7 @@
         <div class="modal-footer">
             <button class="btn-modal" @click="closeModal('ProgrammingView')">Close</button>
         </div>
+        <hr style="visibility: hidden; height: 20px;">
     </vs-modal>
 
     <vs-modal class="modal" ref="OthersView" title="Some other activities in the area" :removeCloseButton="true" size="l">
@@ -182,6 +184,7 @@
         <div class="modal-footer">
             <button class="btn-modal" @click="closeModal('OthersView')">Close</button>
         </div>
+        <hr style="visibility: hidden; height: 20px;">
     </vs-modal>
     <Notivue v-slot="item">
         <Notification :item="item" />
