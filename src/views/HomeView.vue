@@ -6,15 +6,7 @@
             <h1>Hi!, Welcome to my portfolio</h1>
             <h2>I'm Diego Arreola, Full Stack developer</h2>
             <p>
-                I'm from Mexico, <strong>25 years old</strong>, currently live in Celaya, Gto.
-                <br>
-                My favorites languages to program are <strong>PHP</strong> for back-end & <strong>JavaScript</strong> for front-end. I've worked with Java, C++ and a little bit Python.
-                <br>
-                I usually use <strong>Laravel</strong> for back-end & <strong>VueJS</strong> for front-end, at the moment i'm using Laravel for back-end and a mix of old frameworks like <strong>Marionette & BackBone</strong>.
-                <br>
-                I've developed websites with <strong>CMS</strong> like <strong>Wordpress & Shopify</strong>, personally i like to use Wordpress.
-                <br>
-                Also i've designed to many websites using <strong>HTML, CSS & Javascript</strong>.
+                Computer Systems Engineer with almost 3 years of experience in development such as BACKEND and FRONTEND, experience in: Javascript, Typescript, PHP and Python, knowledge in administration and configuration of SMTP emails, basic knowledge of LINUX server administration, 6 years of experience in the design of websites with HTML/CSS or CMS, experience in web development frameworks ReactJS, VueJS, MarionetteJS, BackboneJS, Laravel 7.x, 8.x, 9.x, 10.x, experience in database design and administration SQL and NoSQL data.
             </p>
             <p class="img-text">
                 <img src="@/assets/itclogo.png" width="100px" alt="itcelaya-logo"/>
