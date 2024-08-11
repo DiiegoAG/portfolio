@@ -9,11 +9,11 @@
                 Computer Systems Engineer with almost 3 years of experience in development such as BACKEND and FRONTEND, experience in: Javascript, Typescript, PHP and Python, knowledge in administration and configuration of SMTP emails, basic knowledge of LINUX server administration, 6 years of experience in the design of websites with HTML/CSS or CMS, experience in web development frameworks ReactJS, VueJS, MarionetteJS, BackboneJS, Laravel 7.x, 8.x, 9.x, 10.x, experience in database design and administration SQL and NoSQL data.
             </p>
             <p class="img-text">
-                <img src="@/assets/itclogo.png" width="100px" alt="itcelaya-logo"/>
+                <img src="@/assets/itclogo.png" width="100px" alt="itcelaya-logo" style="margin-right: 10px;" />
                 <span>
-                    <strong>&nbsp; Graduated from the National Technological Institute of Mexico in Celaya.</strong>
+                    <strong>Graduated from the National Technological Institute of Mexico in Celaya.</strong>
                     <br>
-                    <small>&nbsp; Dec 2022</small>
+                    <small>Dec 2022</small>
                 </span>
             </p>
         </div>
