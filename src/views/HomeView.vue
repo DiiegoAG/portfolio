@@ -36,7 +36,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="mobile-align">
             <div class="content">
                 <div class="inner">
                     <h2>Systems where I've developed</h2>
