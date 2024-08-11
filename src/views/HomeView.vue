@@ -71,100 +71,93 @@
     </section>
 
     <!-- Two -->
-    <section id="two" class="wrapper style3 fade-up">
+    <section id="technologies" class="wrapper style3 fade-up">
         <div class="inner">
-            <h2>What we do</h2>
-            <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+            <h2>Languages, Technologies and Tools</h2>
+            <p>Technologies with which I have experience, whether in personal or work projects.</p>
             <div class="features">
                 <section>
-                    <span class="icon solid major fa-code"></span>
-                    <h3>Lorem ipsum amet</h3>
-                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                    <span class="icon"><i class="fa-brands fa-js"></i></span>
+                    <h3>Javascript</h3>
+                    <p>I have <strong>2 years of experience</strong> programming with JavaScript focused on frontend development, the technologies that I've used are the following: <strong>MarionetteJS, BackboneJS, VueJS, ReactJS, JQuery, Promise-based HTTP, JavaScript vanilla, API RESTful</strong></p>
+                    <div class="icons-container">
+                        <i class="fa-brands fa-vuejs"></i>
+                        <i class="fa-brands fa-react"></i>
+                        <i class="fa-brands fa-js"></i>
+                    </div>
                 </section>
                 <section>
-                    <span class="icon solid major fa-lock"></span>
-                    <h3>Aliquam sed nullam</h3>
-                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                    <span class="icon"><i class="fa-brands fa-php"></i></span>
+                    <h3>Backend</h3>
+                    <p>I have <strong>2 years of experience</strong> programming with php focused on backend development, the technologies that I have used with this language are the following: <strong>Laravel, PHP vanilla, SQL, Create API's' endpoints</strong></p>
+                    <div class="icons-container">
+                        <i class="fa-brands fa-laravel"></i>
+                        <i class="fa-brands fa-php"></i>
+                    </div>
                 </section>
                 <section>
-                    <span class="icon solid major fa-cog"></span>
-                    <h3>Sed erat ullam corper</h3>
-                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                    <span class="icon"><i class="fa-solid fa-terminal"></i></span>
+                    <h3>Tools to developed</h3>
+                    <p>During these 2 years of development I have used several tools that have helped me develop in a more efficient way and keep track of the versions of the application under development, these tools are following: <strong>HTML5, CSS3, Boostrap, Wordpress, Shopify, Postman, Git, Github, GitLab, Visual Studio Code, Sublime Text, Databases management tools, flowcharts, Databases flowcharts, SCRUM</strong></p>
                 </section>
                 <section>
-                    <span class="icon solid major fa-desktop"></span>
-                    <h3>Veroeros quis lorem</h3>
-                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                </section>
-                <section>
-                    <span class="icon solid major fa-link"></span>
-                    <h3>Urna quis bibendum</h3>
-                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-                </section>
-                <section>
-                    <span class="icon major fa-gem"></span>
-                    <h3>Aliquam urna dapibus</h3>
-                    <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
+                    <span class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                    <h3>Other tools in work</h3>
+                    <p>I have also used other tools that were required to accomplish the requested tasks: <strong>Anydesk, TeamViewer, SMTP mails, Outlook, MacOS, Windows, Linux, Cloudfire, Vesta, CPanel, Zoom, Office</strong>.</p>
                 </section>
             </div>
-            <ul class="actions">
-                <li><a href="generic.html" class="button">Learn more</a></li>
-            </ul>
         </div>
     </section>
 
     <!-- Three -->
     <section id="three" class="wrapper style1 fade-up">
         <div class="inner">
-            <h2>Get in touch</h2>
-            <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+            <h2>Contact to me</h2>
+            <p>If you are interested in contacting me, you have my email and CV or my contact information available, if you prefer, you can use the following form and send an email right now.</p>
             <div class="split style1">
                 <section>
-                    <form method="post" action="#">
+                    <form @submit.prevent="sendEmail">
                         <div class="fields">
                             <div class="field half">
                                 <label for="name">Name</label>
-                                <input type="text" name="name" id="name" />
+                                <input type="text" v-model="mailData.name" required />
                             </div>
                             <div class="field half">
                                 <label for="email">Email</label>
-                                <input type="text" name="email" id="email" />
+                                <input type="email" v-model="mailData.email" required />
+                            </div>
+                            <div class="field">
+                                <label for="subject">Subject</label>
+                                <input type="text" v-model="mailData.subject" required />
                             </div>
                             <div class="field">
                                 <label for="message">Message</label>
-                                <textarea name="message" id="message" rows="5"></textarea>
+                                <textarea v-model="mailData.message" rows="5" required></textarea>
                             </div>
                         </div>
-                        <ul class="actions">
-                            <li><a href="" class="button submit">Send Message</a></li>
-                        </ul>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <input type="submit" class="button submit" value="Send Message">
+                        </div>
                     </form>
                 </section>
-                <section>
+                <section id="my-cv">
                     <ul class="contact">
                         <li>
-                            <h3>Address</h3>
-                            <span>12345 Somewhere Road #654<br />
-                                Nashville, TN 00000-0000<br />
-                            USA</span>
+                            <h3>Donwload my CV</h3>
+                            <a href="./files/CV_Arreola_Galvan_Diego_EN.pdf" style="margin-right: 10px;" download><img src="@/assets/languages/eng.png" alt="cv-eng"/></a>
+                            <a href="./files/CV_Arreola_Galvan_Diego.pdf" download><img src="@/assets/languages/esp.png" alt="cv-eng"/></a>
+                        </li>
+                        <li>
+                            <h3>Lcoation</h3>
+                            <span>Celaya, Guanajuato. MX</span>
                         </li>
                         <li>
                             <h3>Email</h3>
-                            <a href="#">user@untitled.tld</a>
+                            <a href="mailto:arreola.galvan.diego@gmail.com">arreola.galvan.diego@gmail.com</a>
                         </li>
                         <li>
-                            <h3>Phone</h3>
-                            <span>(000) 000-0000</span>
-                        </li>
-                        <li>
-                            <h3>Social</h3>
-                            <ul class="icons">
-                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                                <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                            </ul>
+                            <h3>Social Networks</h3>
+                            <a href="https://www.linkedin.com/in/arreola-galvan-diego/"><i class="fa-brands fa-linkedin" style="font-size: 50px;"></i></a>
                         </li>
                     </ul>
                 </section>
