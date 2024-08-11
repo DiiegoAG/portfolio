@@ -15,6 +15,7 @@
 			<li>BackboneJS</li>
 			<li>Swig</li>
 			<li>VueJS</li>
+			<li>ReactJS</li>
 			<li>JQuery</li>
 			<li>Promise-based HTTP</li>
 			<li>PHP and Javascript vanilla</li>
