@@ -198,6 +198,9 @@
             <button class="btn-modal" @click="closeModal('OthersView')">Close</button>
         </div>
     </vs-modal>
+    <Notivue v-slot="item">
+        <Notification :item="item" />
+    </Notivue>
 </template>
 
 <script>
@@ -206,14 +209,23 @@
     import DesignView from '@/views/DesignView';
     import ProgrammingView from '@/views/ProgrammingView';
     import OthersView from '@/views/OthersView';
+    import { Notivue, Notification, push } from 'notivue';
+    import { updateConfig } from 'notivue'
 
     export default {
+        mounted () {
+            updateConfig({
+                position: 'bottom-right',
+            });
+        },
         components: {
             CarouselWidget,
             VsModal,
             DesignView,
             ProgrammingView,
-            OthersView
+            OthersView,
+            Notivue,
+            Notification
         },
         methods: {
             openModal(ref) {
@@ -222,10 +234,42 @@
             closeModal(ref) {
                 this.$refs[ref].close();
             },
+            async sendEmail() {
+                const notification = push.promise("We're sending your message, hold on...")
+
+                await window.Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Port: 2525,
+                    Username : "arreola.galvan.diego@gmail.com",
+                    Password : "65FB46A8A6F27979A9316D030C838444ACBC",
+                    To : 'arreola.galvan.diego@gmail.com',
+                    From : 'arreola.galvan.diego@gmail.com',
+                    Subject : `${this.mailData.subject}`,
+                    Body : `<h1>Correo de contacto portafolio web</h1><p><b>${this.mailData.name}</b> &lt;${this.mailData.email}&gt;</p><p>Mensaje:<br>------------------------------------------<br>${this.mailData.message}</p>`
+                })
+                .then((message) => {
+                    setTimeout(() => {
+                        notification.resolve({
+                            title: message,
+                            message: 'Your message has been successfully sent!',
+                            position: 'bottom-right',
+                        });
+                    }, 2000);
+                })
+                .catch(error => {
+                    setTimeout(() => {
+                        notification.reject({
+                            title: error,
+                            message: 'There was an error sending your message. Please try again.'
+                        });
+                    }, 2000);
+                });
+            },
         },
     }
 </script>
 
 <style>
-
+@import 'notivue/notification.css';
+@import 'notivue/animations.css';
 </style>
