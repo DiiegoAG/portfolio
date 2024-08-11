@@ -203,7 +203,7 @@
     export default {
         mounted () {
             updateConfig({
-                position: 'bottom-right',
+                position: 'bottom-left',
             });
         },
         data () {
